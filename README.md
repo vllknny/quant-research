@@ -2,11 +2,13 @@
 
 The repository of me learning quant tools! Will include Python + libs, Q, KDB+, SQL, etc.
 
-## 📊 Python vs Q Financial Database Benchmark Suite
+# Project 1: BENCHMARK FOR QUICKTRADING 
+
+## Python vs Q Financial Database Benchmark Suite
 
 A comprehensive benchmarking framework comparing Python and Q (KDB+) for financial database operations with base financial data and MCP support.
 
-### 🚀 Quick Start
+### Quick Start
 
 ```bash
 # Install dependencies
@@ -22,7 +24,7 @@ python quickstart.py --mode full
 python quickstart.py --mode mcp
 ```
 
-### 📁 Project Files
+### Project Files
 
 #### Core Modules
 - **`financial_data_generator.py`** - Generate realistic OHLCV, trade, and fundamental data
@@ -37,13 +39,14 @@ python quickstart.py --mode mcp
 - **`requirements.txt`** - Python dependencies
 - **`README_BENCHMARK.md`** - Full documentation
 
-### 🎯 Key Features
+### Features
 
 1. **Financial Data Generation**
    - Realistic OHLCV data (Open, High, Low, Close, Volume)
    - Trade tick data
    - Fundamental metrics
    - Customizable date ranges and symbols
+   - no requirements for external API
 
 2. **Python Benchmarking**
    - Pandas operations
@@ -62,7 +65,7 @@ python quickstart.py --mode mcp
    - Integration with Claude and other MCP clients
    - Report generation
 
-### 📈 Expected Results
+### Hypothesis Testing
 
 | Operation | Python (ms) | Q Est. (ms) | Speedup |
 |-----------|------------|------------|---------|
@@ -73,7 +76,7 @@ python quickstart.py --mode mcp
 | Join | 157 | 1.6 | 98x |
 | **Average** | **120** | **1.7** | **~75x** |
 
-### 🔧 Usage Examples
+### Sample Usage WF
 
 #### Generate Data Only
 ```python
@@ -108,7 +111,7 @@ result = server.run_python_benchmark(libraries=['pandas', 'sql'])
 result = server.generate_comparison_report(output_format='markdown')
 ```
 
-### 📝 Benchmark Scenarios
+### Dev Scenarios
 
 Pre-configured scenarios available:
 - **development** - Small dataset for testing (~50K records)
@@ -122,14 +125,14 @@ from benchmark_config import create_config_file
 create_config_file('production')
 ```
 
-### 🎓 Learning Resources
+### Learning Resources
 
 - Full documentation: [README_BENCHMARK.md](README_BENCHMARK.md)
 - Q code examples: See `q_benchmark_reference.py`
 - KDB+ documentation: https://code.kx.com/q/
 - Benchmark methodology: See `comprehensive_benchmark.py`
 
-### 🔍 Performance Insights
+### Results
 
 **Why Q is Fast:**
 - Columnar storage (8-15x compression)
@@ -143,7 +146,7 @@ create_config_file('production')
 - Easy to learn and use
 - Excellent for prototyping
 
-### 📊 Output Files
+### Output Files
 
 After running benchmarks, check:
 ```
@@ -154,7 +157,7 @@ benchmark_results/
 └── financial_data.db            # Test database
 ```
 
-### ⚙️ Customization
+### Modifications
 
 Modify benchmark operations in `python_benchmark.py`:
 ```python
@@ -166,7 +169,7 @@ def benchmark_custom_operation():
     benchmark.benchmark_operation("My Operation", "Pandas", operation)
 ```
 
-### 📦 Dependencies
+### Dependencies
 
 - **pandas** - Data manipulation
 - **numpy** - Numerical computing
@@ -174,19 +177,19 @@ def benchmark_custom_operation():
 - **sqlite3** (built-in) - Database
 - **mcp** (optional) - Model Context Protocol
 
-### 🤝 Integration
+### Integration
 
 - Use with Jupyter Notebooks
-- Integrate with Claude via MCP
+- Integrate with AI analysis if wanted via MCP
 - Connect to KDB+ via qPython
 - Export results for reporting
 
-### 📚 See Also
+### Refer to:
 
-- [Full Benchmark Documentation](README_BENCHMARK.md)
-- [Comprehensive Benchmark Orchestrator](comprehensive_benchmark.py)
-- [Configuration Examples](benchmark_config.py)
-- [MCP Server Details](mcp_benchmark_server.py)
+- [Full Benchmark Documentation]
+- [Comprehensive Benchmark Orchestrator]
+- [Configuration Examples]
+- [MCP Server Details]
 
 ---
 
